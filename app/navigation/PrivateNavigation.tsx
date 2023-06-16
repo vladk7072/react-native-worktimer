@@ -1,6 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { FC } from 'react'
-import { Text, View } from 'react-native'
 import { TypeRootStackParamList } from './navigation.types'
 import { useAuth } from '../hooks/useAuth'
 import Auth from '../components/screens/auth/Auth'

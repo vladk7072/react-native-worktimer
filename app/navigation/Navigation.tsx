@@ -3,8 +3,6 @@ import {
   useNavigationContainerRef
 } from '@react-navigation/native'
 import { FC, useEffect, useState } from 'react'
-import { Text, View } from 'react-native'
-
 import PrivateNavigation from './PrivateNavigation'
 import BottomMenu from '../components/ui/layout/bottom-menu/BottomMenu'
 import { useAuth } from '../hooks/useAuth'
@@ -12,9 +10,8 @@ import { useAuth } from '../hooks/useAuth'
 const Navigation: FC = () => {
   const { user } = useAuth()
 
-  const [currentRoute, setCurrentRoute] = useState<string | undefined>(
-    undefined
-  )
+  const [currentRoute, setCurrentRoute] = useState<string | undefined>(undefined);
+  
   const navRef = useNavigationContainerRef()
   useEffect(() => {
     setCurrentRoute(navRef.getCurrentRoute()?.name)

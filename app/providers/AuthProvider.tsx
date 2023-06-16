@@ -8,7 +8,6 @@ import {
   useEffect,
   useState
 } from 'react'
-import { Text, View } from 'react-native'
 import * as Splash from 'expo-splash-screen'
 
 export type TypeUserState = IUser | null

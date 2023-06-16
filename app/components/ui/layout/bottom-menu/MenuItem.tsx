@@ -15,7 +15,22 @@ const MenuItem: FC<IMenuItemProps> = ({ currentRoute, nav, item }) => {
   const isActive = currentRoute === item.path
 
   return (
-    <Pressable className='w-[24%] items-center' onPress={() => nav(item.path)}>
+    <Pressable
+      className='w-[24%] items-center'
+      onPress={() => nav(item.path)}
+      style={
+        isActive && {
+          shadowColor: AppConstants.primary,
+          shadowOffset: {
+            width: 0,
+            height: 0
+          },
+          shadowOpacity: 0.7,
+          shadowRadius: 10,
+          elevation: 10
+        }
+      }
+    >
       <Feather
         name={item.iconName}
         size={26}
